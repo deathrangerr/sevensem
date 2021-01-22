@@ -11,7 +11,7 @@ sudo yum install -y haproxy keepalived
 cp /etc/keepalived/keepalived.conf  /root/keepalived.conf.bkp
 sed -i 'd' /etc/keepalived/keepalived.conf
 sudo sh -c 'echo "global_defs {"  > /etc/keepalived/keepalived.conf'
-sed -i '2 a  router_id haproxy01\n} \nvrrp_script haproxy { \n  script "killall -0 haproxy" \n  interval 2 \n  weight 2 \n} \nvrrp_instance 50 { \n  virtual_router_id 50 \n  advert_int 1 \n priority 101 \n state MASTER \n interface ens33 \n  virtual_ipaddress { \n    192.168.0.110 dev ens33 \n  } \n track_script { \n    haproxy \n  } \n}' /etc/keepalived/keepalived.conf
+sed -i '1 a  router_id haproxy01\n} \nvrrp_script haproxy { \n  script "killall -0 haproxy" \n  interval 2 \n  weight 2 \n} \nvrrp_instance 50 { \n  virtual_router_id 50 \n  advert_int 1 \n  priority 101 \n  state MASTER \n  interface ens33 \n  virtual_ipaddress { \n    192.168.0.110 dev ens33 \n  } \n track_script { \n    haproxy \n  } \n}' /etc/keepalived/keepalived.conf
 
 #Start keepalived and Haproxy
 sudo systemctl enable keepalived haproxy && systemctl start haproxy keepalived
