@@ -34,7 +34,6 @@ sed -i '$ a 192.168.0.110     haproxyvip.example.com    haproxyvip \n192.168.0.1
 
 #Making host name entry
 sudo hostnamectl set-hostname haproxy01
-sudo su –
 hostname --fqdn
 
 #editing ens33 interface file
