@@ -7,19 +7,19 @@ sudo apt update
 sudo apt-get install tomcat7 -y
 sleep 5s
 
-cp /home/ubuntu/sevensem/CloudenabledWebApp/target/CloudenabledWebApp.war /var/lib/tomcat7/webapps/
+#cp /home/ubuntu/sevensem/CloudenabledWebApp/target/CloudenabledWebApp.war /var/lib/tomcat7/webapps/
 
-sudo apt install wget git vim nano curl openjdk-8-jdk maven -y 
-git clone https://github.com/deathrangerr/CloudenabledWebApp.git
-cd CloudenabledWebApp
-mvn compile
-mvn test
-mvn package
-
-
+#sudo apt install wget git vim nano curl openjdk-8-jdk maven -y 
+#git clone https://github.com/deathrangerr/CloudenabledWebApp.git
+#cd CloudenabledWebApp
+#mvn compile
+#mvn test
+#mvn package
 
 
-systemctl restart tomcat7
+
+
+#systemctl restart tomcat7
 
 
 
