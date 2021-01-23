@@ -12,3 +12,11 @@ sed -i '$ a deb http://us.archive.ubuntu.com/ubuntu/ xenial main \ndeb http://us
 sudo apt-get update
 sudo apt-get install tomcat7 -y
 
+cp /home/ubuntu/sevensem/CloudenabledWebApp/target/CloudenabledWebApp.war /var/lib/tomcat7/webapps/
+
+systemctl restart tomcat7
+
+###visit public ip of ur instance with port 8080 and project name
+
+###eg:13.24.1.98:8080/CloudenabledWebApp
+
