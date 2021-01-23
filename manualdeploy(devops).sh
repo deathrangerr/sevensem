@@ -2,6 +2,8 @@
 sudo apt update
 
 #sudo apt-get update
+sed -i '$ a deb http://us.archive.ubuntu.com/ubuntu/ xenial main \ndeb http://us.archive.ubuntu.com/ubuntu/ xenial universe' /etc/apt/sources.list
+sudo apt update
 sudo apt-get install tomcat7 -y
 sleep 5s
 
@@ -14,7 +16,7 @@ mvn compile
 mvn test
 mvn package
 
-sed -i '$ a deb http://us.archive.ubuntu.com/ubuntu/ xenial main \ndeb http://us.archive.ubuntu.com/ubuntu/ xenial universe' /etc/apt/sources.list
+
 
 
 systemctl restart tomcat7
