@@ -15,6 +15,3 @@ sed -i '1 a  router_id haproxy01\n} \nvrrp_script haproxy { \n  script "killall 
 
 #Start keepalived and Haproxy
 sudo systemctl enable keepalived haproxy && systemctl start haproxy keepalived
-
-#status of keepalived and ha 
-systemctl status haproxy keepalived
