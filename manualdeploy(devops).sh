@@ -9,7 +9,7 @@ mvn package
 
 sed -i '$ a deb http://us.archive.ubuntu.com/ubuntu/ xenial main \ndeb http://us.archive.ubuntu.com/ubuntu/ xenial universe' /etc/apt/sources.list
 
-sudo apt-get update
+#sudo apt-get update
 sudo apt-get install tomcat7 -y
 
 cp /home/ubuntu/sevensem/CloudenabledWebApp/target/CloudenabledWebApp.war /var/lib/tomcat7/webapps/
