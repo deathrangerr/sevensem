@@ -38,3 +38,5 @@ systemctl restart jenkins && systemctl status jenkins
 
 
 #sh'systemctl restart tomcat7'
+
+#}
