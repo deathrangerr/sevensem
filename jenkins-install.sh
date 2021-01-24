@@ -28,7 +28,7 @@ systemctl restart jenkins && systemctl status jenkins
 
 #####pipeline script copy and paste
 #node{
-#stage('cloing')
+#stage('cloning')
 #git'https://github.com/deathrangerr/CloudenabledWebApp.git'
 
 #stage('compile')
