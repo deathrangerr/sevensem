@@ -28,15 +28,22 @@ systemctl restart jenkins && systemctl status jenkins
 
 #####pipeline script copy and paste
 #node{
-#sh'git clone https://github.com/deathrangerr/CloudenabledWebApp.git'
-#sh'cd CloudenabledWebApp'
+#stage('cloing')
+#git'https://github.com/deathrangerr/CloudenabledWebApp.git'
+
+#stage('compile')
 #sh'mvn compile'
+
+#stage('test')
 #sh'mvn test'
+
+#stage('package')
 #sh'mvn package'
 
-#sh'cp /home/ubuntu/sevensem/CloudenabledWebApp/target/CloudenabledWebApp.war /var/lib/tomcat7/webapps/'
+#stage('copying')
+#sh'sudo cp target/CloudenabledWebApp.war /var/lib/tomcat7/webapps/'
 
-
-#sh'systemctl restart tomcat7'
+#stage('restarting tomact')
+#sh'sudo systemctl restart tomcat7'
 
 #}
