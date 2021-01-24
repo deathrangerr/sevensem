@@ -8,7 +8,7 @@ sudo apt-get install tomcat7 -y
 sleep 5s
 
 ####INSTALLING NECESSARY BASIC TOOL WITH JAVA####
-sudo apt install wget git vim nano curl -y
+sudo apt install wget git vim nano curl maven -y
 ####USING WGET COMMAND TO ADD JENKINS KEYS####
 sudo wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 ####ADDING JENKINS TOOL TO SOURCE FILE####
