@@ -1,4 +1,5 @@
 cd /home/ubuntu/
+apt install unzip -y
 wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip
 unzip sonar-scanner-cli-4.2.0.1873-linux.zip 
 cd  sonar-scanner-4.2.0.1873-linux/
