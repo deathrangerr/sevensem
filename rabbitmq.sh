@@ -1,5 +1,20 @@
 #!/bin/bash
 #add the repo for mariadb
+yum -y install yum-plugin-priorities
+yum -y install centos-release-openstack-rocky
+yum -n update
+yum install python-openstackclient -y
+yum install openstack-selinux -y
+
+sed -i 's/enforcing/permissive/g' /etc/selinux/config
+
+setenforce 0
+
+systemctl stop firewalld
+systemctl disable firewalld
+systemctl stop NetworkManager
+systemctl disable NetworkManager
+
 touch /etc/yum.repos.d/mariadb.repo
 sudo sh -c 'echo "[mariadb]" > /etc/yum.repos.d/mariadb.repo'
 
