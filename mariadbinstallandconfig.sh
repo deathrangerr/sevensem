@@ -4,7 +4,7 @@
 touch /etc/yum.repos.d/mariadb.repo
 sudo sh -c 'echo "[mariadb]" > /etc/yum.repos.d/mariadb.repo'
 
-sudo sed -i '2 a name = MariaDB \nbaseurl = http://yum.mariadb.org/10.0/rhel7-amd64/ \ngpgkey = https://yum.mariadb.org/RPM-GPG-KEY-MariaDB \ngpgcheck = 1' /etc/yum.repos.d/mariadb.repo
+sudo sed -i '1 a name = MariaDB \nbaseurl = http://yum.mariadb.org/10.0/rhel7-amd64/ \ngpgkey = https://yum.mariadb.org/RPM-GPG-KEY-MariaDB \ngpgcheck = 1' /etc/yum.repos.d/mariadb.repo
 
 #installing mariadb and gallera
 yum install MariaDB-Galera-server MariaDB-client galera socatrsync -y
@@ -87,6 +87,8 @@ mysql_secure_installation
 ######quit;
 
 #####service mysql stop
+
+#####vim /etc/my.cnf.d/server.cnf
 
 #Configure mysql
 #[mysqld]
