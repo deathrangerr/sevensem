@@ -33,7 +33,7 @@ sudo systemctl disable NetworkManager
 sed -i '$ a 192.168.0.120  mysqlvip.example.com  mysqlvip \n192.168.0.121     mysql01.example.com       mysql01 \n192.168.0.122     mysql02.example.com       mysql02' /etc/hosts
 
 #Making host name entry
-sudo hostnamectl set-hostname haproxy01
+sudo hostnamectl set-hostname mysql01
 hostname --fqdn
 
 #editing ens33 interface file
