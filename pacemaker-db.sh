@@ -1,5 +1,20 @@
 #!/bin/bash
 
+yum -y install yum-plugin-priorities
+yum -y install centos-release-openstack-rocky
+yum -n update
+yum install python-openstackclient -y
+yum install openstack-selinux -y
+
+sed -i 's/enforcing/permissive/g' /etc/selinux/config
+
+setenforce 0
+
+systemctl stop firewalld
+systemctl disable firewalld
+systemctl stop NetworkManager
+systemctl disable NetworkManager
+
 #Install the Pacemaker Packages on ALL the Database Nodes
 sudo yum install -y pcs pacemaker corosync fence-agents-all resource-agents -y
 
