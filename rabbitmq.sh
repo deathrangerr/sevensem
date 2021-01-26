@@ -1,5 +1,5 @@
 #!/bin/bash
-#add the repo for mariadb
+#add the repo for mariadb 
 yum -y install yum-plugin-priorities
 yum -y install centos-release-openstack-rocky
 yum -n update
